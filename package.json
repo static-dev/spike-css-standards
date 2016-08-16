@@ -1,0 +1,38 @@
+{
+  "name": "spike-css-standards",
+  "description": "standard plugin pack for postcss",
+  "version": "0.0.0",
+  "author": "static-dev",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/static-dev/spike-css-standards/issues",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "coveralls": "^2.11.12",
+    "nyc": "^8.1.0",
+    "rewire": "^2.5.2",
+    "snazzy": "^4.0.1",
+    "standard": "^7.1.2"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "homepage": "https://github.com/static-dev/spike-css-standards",
+  "license": "MIT",
+  "main": "lib",
+  "repository": "static-dev/spike-css-standards",
+  "scripts": {
+    "test": "nyc ava",
+    "lint": "standard | snazzy",
+    "coverage": "nyc ava && nyc report --reporter=html && open ./coverage/index.html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "cssnano": "^3.7.4",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "rucksack-css": "^0.8.6",
+    "sugarss": "^0.1.5"
+  }
+}
