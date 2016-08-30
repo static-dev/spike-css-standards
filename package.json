@@ -7,6 +7,13 @@
     "verbose": "true"
   },
   "bugs": "https://github.com/static-dev/spike-css-standards/issues",
+  "dependencies": {
+    "cssnano": "^3.7.4",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "rucksack-css": "^0.8.6",
+    "sugarss": "^0.1.5"
+  },
   "devDependencies": {
     "ava": "^0.16.0",
     "coveralls": "^2.11.12",
@@ -19,20 +26,19 @@
     "node": ">= 6"
   },
   "homepage": "https://github.com/static-dev/spike-css-standards",
+  "keywords": [
+    "css",
+    "postcss-plugin",
+    "spike",
+    "standards"
+  ],
   "license": "MIT",
   "main": "lib",
   "repository": "static-dev/spike-css-standards",
   "scripts": {
-    "test": "nyc ava",
-    "lint": "standard | snazzy",
     "coverage": "nyc ava && nyc report --reporter=html && open ./coverage/index.html",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
-  },
-  "dependencies": {
-    "cssnano": "^3.7.4",
-    "postcss-cssnext": "^2.7.0",
-    "postcss-import": "^8.1.2",
-    "rucksack-css": "^0.8.6",
-    "sugarss": "^0.1.5"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard | snazzy",
+    "test": "nyc ava"
   }
 }
