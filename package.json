@@ -20,7 +20,7 @@
     "nyc": "^8.1.0",
     "rewire": "^2.5.2",
     "snazzy": "^4.0.1",
-    "standard": "^7.1.2"
+    "standard": "^8.0.0"
   },
   "engines": {
     "node": ">= 6"
