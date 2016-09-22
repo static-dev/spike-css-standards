@@ -21,8 +21,8 @@ standard plugin pack for postcss
 This is nothing more than a light wrapper around a postcss configuration object. Options are filtered into their appropriate plugins internally. All are optional.
 
 ```js
-const reshape = require('postcss')
-const htmlStandards = require('spike-css-standards')
+const postcss = require('postcss')
+const cssStandards = require('spike-css-standards')
 
 postcss(cssStandards(/* options */))
   .process(someCss)
