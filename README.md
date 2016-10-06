@@ -28,7 +28,7 @@ const standards = cssStandards(/* options */)
 // returns { parser: 'xxx', plugins: ['xxx'] }
 
 postcss(standards.plugins)
-  .process(someCss)
+  .process(someCss, { parser: standards.parser })
   .then((res) => { console.log(res.content) })
 
 ```
