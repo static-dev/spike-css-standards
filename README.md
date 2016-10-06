@@ -24,9 +24,13 @@ This is nothing more than a light wrapper around a postcss configuration object.
 const postcss = require('postcss')
 const cssStandards = require('spike-css-standards')
 
-postcss(cssStandards(/* options */))
-  .process(someCss)
+const standards = cssStandards(/* options */)
+// returns { parser: 'xxx', plugins: ['xxx'] }
+
+postcss(standards.plugins)
+  .process(someCss, { parser: standards.parser })
   .then((res) => { console.log(res.content) })
+
 ```
 
 By default, the css standard plugin pack includes:
