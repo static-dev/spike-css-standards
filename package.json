@@ -12,7 +12,7 @@
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "rucksack-css": "^0.8.6",
-    "sugarss": "^0.1.5"
+    "sugarss": "^0.2.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
