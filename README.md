@@ -41,7 +41,21 @@ By default, the css standard plugin pack includes:
 - [rucksack](https://simplaio.github.io/rucksack/), default settings
 - [cssnano](http://cssnano.co/), toggled with the `minify` option which is false by default
 
-Any of these plugins can be customized by passing options described below.
+Any of these plugins can be customized by passing the [options](#options) described below. You can also add additional postCSS plugins (like the popular [`lost`](https://github.com/peterramsing/lost) grid, for example) on top of this package:
+
+```js
+//  app.js
+const cssStandards = require('spike-css-standards')
+const lost = require('lost')
+
+//  ...
+postcss: (ctx) => {
+  const css = cssStandards({ webpack: ctx })
+  css.plugins.push(lost())
+  return css
+},
+//  ...
+```
 
 ### Options
 
