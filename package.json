@@ -11,7 +11,7 @@
     "cssnano": "^3.7.4",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
-    "rucksack-css": "^0.8.6",
+    "rucksack-css": "^0.9.0",
     "sugarss": "^0.2.0"
   },
   "devDependencies": {
