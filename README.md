@@ -63,6 +63,7 @@ postcss: (ctx) => {
 | ---- | ----------- | ------- |
 | **root** | Root path used to resolve layouts and includes | |
 | **addDependencyTo** | Object with `addDependency` method that will get file paths for tracked deps from includes/layouts | |
+| **path** | A string or an array of paths to tell [postcss-import](https://github.com/postcss/postcss-import#path) where to look for files. | |
 | **webpack** | Shortcut for webpack users to set the `root` and `addDependencyTo` options more easily. Pass webpack loader context. | |
 | **browsers** | Browser support provided to [autoprefixer](http://cssnext.io/usage/#browsers) | `> 1%, last 2 versions, Firefox ESR` |
 | **features** | Enable or disable [cssnext features](http://cssnext.io/usage/#features) | |
