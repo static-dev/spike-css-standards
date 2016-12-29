@@ -7,6 +7,7 @@ test('basic', (t) => {
   cssStandardsRewired.__set__('postcssImport', (opts) => {
     t.truthy(opts.root === 'test')
     t.truthy(opts.addDependencyTo.addDependency === 'test')
+    t.truthy(opts.path[0] === 'test/test')
   })
 
   cssStandardsRewired.__set__('cssnext', (opts) => {
@@ -22,6 +23,7 @@ test('basic', (t) => {
   const out1 = cssStandardsRewired({
     parser: false,
     webpack: { resourcePath: 'test', addDependency: 'test' },
+    path: ['test/test'],
     features: 'test',
     browsers: 'test',
     warnForDuplicates: 'test',
