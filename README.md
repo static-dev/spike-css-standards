@@ -61,7 +61,7 @@ postcss: (ctx) => {
 
 | Name | Description | Default |
 | ---- | ----------- | ------- |
-| **root** | Root path used to resolve paths from | If `webpack` option is provided, `options.context` |
+| **root** | Root used to resolve `path`(s) from | If `webpack` option is provided, `options.context` |
 | **path** | A path to a folder or an array of paths, telling postcss-import where to look for sss or css files to `@import`. | If `webpack` option is provided, `loaderContext.resourcePath` |
 | **webpack** | Shortcut for webpack users to set the `root` and `path` options more easily. Pass webpack loader context. | |
 | **browsers** | Browser support provided to [autoprefixer](http://cssnext.io/usage/#browsers) | `> 1%, last 2 versions, Firefox ESR` |
