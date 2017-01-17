@@ -6,7 +6,9 @@ const test = require('ava')
 test('basic', (t) => {
   cssStandardsRewired.__set__('postcssImport', (opts) => {
     t.truthy(opts.root === 'test')
-    t.truthy(opts.addDependencyTo.addDependency === 'test')
+    t.truthy(opts.path[0] === 'test/test1')
+    t.truthy(opts.path[1] === 'test/test2')
+    t.truthy(opts.path[2] === 'test') // webpack.resourcePath
   })
 
   cssStandardsRewired.__set__('cssnext', (opts) => {
@@ -21,7 +23,12 @@ test('basic', (t) => {
 
   const out1 = cssStandardsRewired({
     parser: false,
-    webpack: { resourcePath: 'test', addDependency: 'test' },
+    webpack: {
+      resourcePath: 'test',
+      addDependency: 'test',
+      options: { context: 'test' }
+    },
+    path: ['test/test1', 'test/test2'],
     features: 'test',
     browsers: 'test',
     warnForDuplicates: 'test',
