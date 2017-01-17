@@ -25,7 +25,6 @@ test('basic', (t) => {
     parser: false,
     webpack: {
       resourcePath: 'test',
-      addDependency: 'test',
       options: { context: 'test' }
     },
     path: ['test/test1', 'test/test2'],
