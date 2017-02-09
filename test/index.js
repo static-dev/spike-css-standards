@@ -8,7 +8,6 @@ test('basic', (t) => {
     t.truthy(opts.root === 'test')
     t.truthy(opts.path[0] === 'test/test1')
     t.truthy(opts.path[1] === 'test/test2')
-    t.truthy(opts.path[2] === 'test') // webpack.resourcePath
   })
 
   cssStandardsRewired.__set__('cssnext', (opts) => {
@@ -23,15 +22,12 @@ test('basic', (t) => {
 
   const out1 = cssStandardsRewired({
     parser: false,
-    webpack: {
-      resourcePath: 'test',
-      options: { context: 'test' }
-    },
     path: ['test/test1', 'test/test2'],
     features: 'test',
     browsers: 'test',
     warnForDuplicates: 'test',
-    rucksack: 'test'
+    rucksack: 'test',
+    root: 'test'
   })
 
   t.truthy(out1.plugins.length === 3)

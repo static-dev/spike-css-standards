@@ -44,26 +44,19 @@ By default, the css standard plugin pack includes:
 Any of these plugins can be customized by passing the [options](#options) described below. You can also add additional postCSS plugins (like the popular [`lost`](https://github.com/peterramsing/lost) grid, for example) on top of this package:
 
 ```js
-//  app.js
 const cssStandards = require('spike-css-standards')
 const lost = require('lost')
 
-//  ...
-postcss: (ctx) => {
-  const css = cssStandards({ webpack: ctx })
-  css.plugins.push(lost())
-  return css
-},
-//  ...
+const css = cssStandards()
+css.plugins.push(lost())
 ```
 
 ### Options
 
 | Name | Description | Default |
 | ---- | ----------- | ------- |
-| **root** | Root used to resolve `path`(s) from | If `webpack` option is provided, `options.context` |
-| **path** | A path to a folder or an array of paths, telling postcss-import where to look for sss or css files to `@import`. | If `webpack` option is provided, `loaderContext.resourcePath` |
-| **webpack** | Shortcut for webpack users to set the `root` and `path` options more easily. Pass webpack loader context. | |
+| **root** | Root used to resolve `path`(s) from | |
+| **path** | A path to a folder or an array of paths, telling postcss-import where to look for sss or css files to `@import`. | |
 | **browsers** | Browser support provided to [autoprefixer](http://cssnext.io/usage/#browsers) | `> 1%, last 2 versions, Firefox ESR` |
 | **features** | Enable or disable [cssnext features](http://cssnext.io/usage/#features) | |
 | **warnForDuplicates** | Enable or disable [cssnext duplicate warnings](http://cssnext.io/usage/#warnforduplicates) | `true` |
