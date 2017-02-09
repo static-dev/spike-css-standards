@@ -1,6 +1,6 @@
 const rewire = require('rewire')
-const cssStandardsRewired = rewire('..')
-const cssStandards = require('..')
+const cssStandardsRewired = rewire('../lib')
+const cssStandards = require('../lib')
 const test = require('ava')
 
 test('basic', (t) => {
