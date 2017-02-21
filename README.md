@@ -63,6 +63,8 @@ css.plugins.push(lost())
 | **rucksack** | Options passed directly to [rucksack](http://simplaio.github.io/rucksack/docs/#options) | |
 | **parser** | custom css parser if desired. pass `false` to use the default css parser | `sugarss` |
 | **minify** | Minifies the css output by removing excess spaces and line breaks | `false` |
+| **appendPlugins** | Adds a single plugin or array of plugins after all the defaults | |
+| **prependPlugins** | Adds a single plugin or array of plugins before all the defaults | |
 
 ### License & Contributing
 
