@@ -1,44 +1,67 @@
 const rewire = require('rewire')
-const cssStandardsRewired = rewire('..')
-const cssStandards = require('..')
+const cssStandardsRewired = rewire('../lib')
+const cssStandards = require('../lib')
 const test = require('ava')
 
-test('basic', (t) => {
-  cssStandardsRewired.__set__('postcssImport', (opts) => {
-    t.truthy(opts.root === 'test')
-    t.truthy(opts.path[0] === 'test/test1')
-    t.truthy(opts.path[1] === 'test/test2')
-    t.truthy(opts.path[2] === 'test') // webpack.resourcePath
-  })
+test('passes parser opt correctly', (t) => {
+  const out = cssStandards({ parser: 'test' })
+  const out2 = cssStandards({ parser: false })
+  t.is(out.parser, 'test')
+  t.is(out2.parser, undefined)
+})
 
-  cssStandardsRewired.__set__('cssnext', (opts) => {
-    t.truthy(opts.features === 'test')
-    t.truthy(opts.browsers === 'test')
-    t.truthy(opts.warnForDuplicates === 'test')
+test('passes import opts correctly', (t) => {
+  const undo = cssStandardsRewired.__set__('postcssImport', (opts) => {
+    t.is(opts.root, 'test')
+    t.is(opts.path[0], 'test')
   })
+  cssStandardsRewired({ root: 'test', path: 'test' })
+  undo()
+})
 
-  cssStandardsRewired.__set__('rucksack', (opts) => {
-    t.truthy(opts === 'test')
+test('passes cssnext opts correctly', (t) => {
+  const undo = cssStandardsRewired.__set__('cssnext', (opts) => {
+    t.is(opts.browsers, 'test')
+    t.is(opts.features, 'test')
+    t.is(opts.warnForDuplicates, 'test')
   })
-
-  const out1 = cssStandardsRewired({
-    parser: false,
-    webpack: {
-      resourcePath: 'test',
-      options: { context: 'test' }
-    },
-    path: ['test/test1', 'test/test2'],
-    features: 'test',
+  cssStandardsRewired({
     browsers: 'test',
-    warnForDuplicates: 'test',
-    rucksack: 'test'
+    features: 'test',
+    warnForDuplicates: 'test'
   })
+  undo()
+})
 
-  t.truthy(out1.plugins.length === 3)
-  t.falsy(out1.parser)
+test('passes rucksack opts correctly', (t) => {
+  const undo = cssStandardsRewired.__set__('rucksack', (opts) => {
+    t.is(opts, 'test')
+  })
+  cssStandardsRewired({ rucksack: 'test' })
+  undo()
+})
 
-  const out2 = cssStandards({ minify: true })
+test('default plugins working', (t) => {
+  const out = cssStandards()
+  t.is(out.plugins.length, 3)
+})
 
-  t.truthy(out2.parser)
-  t.truthy(out2.plugins.length === 4)
+test('minify option working', (t) => {
+  const out = cssStandards({ minify: true })
+  t.is(out.plugins.length, 4)
+  t.is(out.plugins[out.plugins.length - 1].postcssPlugin, 'cssnano')
+})
+
+test('appendPlugins option', (t) => {
+  const out = cssStandards({ appendPlugins: ['test'] })
+  const out2 = cssStandards({ appendPlugins: 'test' })
+  t.truthy(out.plugins[out.plugins.length - 1] === 'test')
+  t.truthy(out2.plugins[out.plugins.length - 1] === 'test')
+})
+
+test('prependPlugins option', (t) => {
+  const out = cssStandards({ prependPlugins: ['test'] })
+  const out2 = cssStandards({ prependPlugins: 'test' })
+  t.truthy(out.plugins[0] === 'test')
+  t.truthy(out2.plugins[0] === 'test')
 })
