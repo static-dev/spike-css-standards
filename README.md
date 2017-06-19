@@ -72,10 +72,30 @@ css.plugins.push(lost())
 | ---- | ----------- | ------- |
 | **root** | Root used to resolve `path`(s) from | |
 | **path** | A path to a folder or an array of paths, telling postcss-import where to look for sss or css files to `@import`. | |
-| **browsers** | Browser support provided to [autoprefixer](http://cssnext.io/usage/#browsers) | `> 1%, last 2 versions, Firefox ESR` |
-| **features** | Enable, disable, or pass options to a most included plugins | |
-| **warnForDuplicates** | Enable or disable [cssnext duplicate warnings](http://cssnext.io/usage/#warnforduplicates) | `true` |
 | **rucksack** | Options passed directly to [rucksack](http://simplaio.github.io/rucksack/docs/#options) | |
+| **postcssImport** | Options passed to [postcss-import](https://github.com/postcss/postcss-import) | |
+| **autoprefixer** | Options passed to [autoprefixer](https://github.com/postcss/autoprefixer) | |
+| **attributeCaseInsensitive** | Options passed to [postcss-attribute-case-insensitive](https://github.com/Semigradsky/postcss-attribute-case-insensitive) | |
+| **calc** | Options passed to [postcss-calc](https://github.com/postcss/postcss-calc) | |
+| **colorFunction** | Options passed to [postcss-color-function](https://github.com/postcss/postcss-color-function) | |
+| **colorGray** | Options passed to [postcss-color-gray](https://github.com/postcss/postcss-color-gray) | |
+| **colorHexAlpha** | Options passed to [postcss-color-hex-alpha](https://github.com/postcss/postcss-color-hex-alpha) | |
+| **colorHsl** | Options passed to [postcss-color-hsl](https://github.com/dmarchena/postcss-color-hsl) | |
+| **colorHwb** | Options passed to [postcss-color-hwb](https://github.com/postcss/postcss-color-hwb) | |
+| **colorRebeccapurple** | Options passed to [postcss-color-rebeccapurple](https://github.com/postcss/postcss-color-rebeccapurple) | |
+| **colorRgb** | Options passed to [postcss-color-rgb](https://github.com/dmarchena/postcss-color-rgb) | |
+| **customMedia** | Options passed to [postcss-custom-media](https://github.com/postcss/postcss-custom-media) | |
+| **customProperties** | Options passed to [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) | |
+| **customSelectors** | Options passed to [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors) | |
+| **fontFamilySystemUi** | Options passed to [postcss-font-family-system-ui](https://github.com/JLHwung/postcss-font-family-system-ui) | |
+| **fontVariant** | Options passed to [postcss-font-variant](https://drafts.csswg.org/css-fonts-4/#system-ui-def) | |
+| **imageSet** | Options passed to [postcss-image-set-polyfill](https://github.com/SuperOl3g/postcss-image-set-polyfill) | |
+| **mediaQueriesRange** | Options passed to [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax) | |
+| **nesting** | Options passed to [postcss-nesting](https://github.com/jonathantneal/postcss-nesting) | |
+| **pseudoClassAnyLink** | Options passed to [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link) | |
+| **pseudoClassMatches** | Options passed to [postcss-selector-matches](https://github.com/postcss/postcss-selector-matches) | |
+| **pseudoClassNot** | Options passed to [postcss-selector-not](https://github.com/postcss/postcss-selector-not) | |
+| **cssnano** | Options passed to [cssnano](http://cssnano.co/) | |
 | **parser** | custom css parser if desired. pass `false` to use the default css parser | `sugarss` |
 | **minify** | Minifies the css output by removing excess spaces and line breaks | `false` |
 | **appendPlugins** | Adds a single plugin or array of plugins after all the defaults | |
