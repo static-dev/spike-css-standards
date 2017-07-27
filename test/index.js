@@ -5,9 +5,7 @@ const test = require('ava')
 
 test('passes parser opt correctly', (t) => {
   const out = cssStandards({ parser: 'test' })
-  const out2 = cssStandards({ parser: false })
   t.is(out.parser, 'test')
-  t.is(out2.parser, undefined)
 })
 
 test('passes import opts correctly', (t) => {

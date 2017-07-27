@@ -8,7 +8,7 @@
   },
   "bugs": "https://github.com/static-dev/spike-css-standards/issues",
   "dependencies": {
-    "autoprefixer": "^7.1.1",
+    "autoprefixer": "^7.1.2",
     "cssnano": "^3.7.4",
     "postcss-attribute-case-insensitive": "^2.0.0",
     "postcss-calc": "^6.0.0",
@@ -20,7 +20,7 @@
     "postcss-color-rebeccapurple": "^3.0.0",
     "postcss-color-rgb": "^2.0.0",
     "postcss-custom-media": "^6.0.0",
-    "postcss-custom-properties": "^6.0.1",
+    "postcss-custom-properties": "^6.1.0",
     "postcss-custom-selectors": "^4.0.1",
     "postcss-font-family-system-ui": "^2.0.1",
     "postcss-font-variant": "^3.0.0",
@@ -31,13 +31,12 @@
     "postcss-pseudo-class-any-link": "^4.0.0",
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",
-    "rucksack-css": "^0.9.1",
-    "sugarss": "^1.0.0"
+    "rucksack-css": "^0.9.1"
   },
   "devDependencies": {
     "ava": "^0.21.0",
     "coveralls": "^2.13.1",
-    "nyc": "^11.0.2",
+    "nyc": "^11.0.3",
     "rewire": "^2.5.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.2"
