@@ -31,7 +31,7 @@
     "postcss-pseudo-class-any-link": "^4.0.0",
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",
-    "rucksack-css": "^0.9.1"
+    "rucksack-css": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.21.0",
