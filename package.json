@@ -25,7 +25,7 @@
     "postcss-font-family-system-ui": "^2.0.1",
     "postcss-font-variant": "^3.0.0",
     "postcss-image-set-polyfill": "^0.4.3",
-    "postcss-import": "^10.0.0",
+    "postcss-import": "^11.0.0",
     "postcss-media-minmax": "^3.0.0",
     "postcss-nesting": "^4.0.1",
     "postcss-property-lookup": "^2.0.0",
