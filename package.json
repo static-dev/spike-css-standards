@@ -28,6 +28,7 @@
     "postcss-import": "^10.0.0",
     "postcss-media-minmax": "^3.0.0",
     "postcss-nesting": "^4.0.1",
+    "postcss-property-lookup": "^2.0.0",
     "postcss-pseudo-class-any-link": "^4.0.0",
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",

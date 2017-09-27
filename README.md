@@ -51,6 +51,7 @@ By default, the css standard plugin pack includes:
 - [postcss-image-set-polyfill](https://github.com/SuperOl3g/postcss-image-set-polyfill), polyfills [image-set](https://drafts.csswg.org/css-images-3/#image-set-notation) for resolution detection
 - [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax), nice syntax sugar for media queries from [media queries level 4 spec](https://drafts.csswg.org/mediaqueries/#mq-range-context)
 - [postcss-nesting](https://github.com/jonathantneal/postcss-nesting), polyfill for [css nesting module level 3](http://tabatkins.github.io/specs/css-nesting/)
+- [postcss-property-lookup](https://github.com/simonsmith/postcss-property-lookup), sugar for referencing other properties
 - [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link), polyfills [:any-link pseudo-class](https://drafts.csswg.org/selectors/#any-link-pseudo)
 - [postcss-selector-matches](https://github.com/postcss/postcss-selector-matches), polyfills [:matches pseudo-class](https://drafts.csswg.org/selectors-4/#matches)
 - [postcss-selector-not](https://github.com/postcss/postcss-selector-not), polyfills [:not pseudo-class](https://drafts.csswg.org/selectors-4/#negation)
@@ -89,6 +90,7 @@ css.plugins.push(lost())
 | **customSelectors** | Options passed to [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors) | |
 | **fontFamilySystemUi** | Options passed to [postcss-font-family-system-ui](https://github.com/JLHwung/postcss-font-family-system-ui) | |
 | **fontVariant** | Options passed to [postcss-font-variant](https://drafts.csswg.org/css-fonts-4/#system-ui-def) | |
+| **propertyLookup** | Options passed to [postcss-property-lookup](https://github.com/simonsmith/postcss-property-lookup) | |
 | **imageSet** | Options passed to [postcss-image-set-polyfill](https://github.com/SuperOl3g/postcss-image-set-polyfill) | |
 | **mediaQueriesRange** | Options passed to [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax) | |
 | **nesting** | Options passed to [postcss-nesting](https://github.com/jonathantneal/postcss-nesting) | |

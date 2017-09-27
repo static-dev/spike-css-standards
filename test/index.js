@@ -137,6 +137,14 @@ test('passes fontVariant opts correctly', (t) => {
   undo()
 })
 
+test('passes propertyLookup opts correctly', (t) => {
+  const undo = cssStandardsRewired.__set__('propertyLookup', (opts) => {
+    t.is(opts, 'test')
+  })
+  cssStandardsRewired({ propertyLookup: 'test' })
+  undo()
+})
+
 test('passes pseudoClassMatches opts correctly', (t) => {
   const undo = cssStandardsRewired.__set__('pseudoClassMatches', (opts) => {
     t.is(opts, 'test')
@@ -179,12 +187,12 @@ test('passes rucksack opts correctly', (t) => {
 
 test('default plugins working', (t) => {
   const out = cssStandards()
-  t.is(out.plugins.length, 23)
+  t.is(out.plugins.length, 24)
 })
 
 test('minify option working', (t) => {
   const out = cssStandards({ minify: true })
-  t.is(out.plugins.length, 24)
+  t.is(out.plugins.length, 25)
   t.is(out.plugins[out.plugins.length - 1].postcssPlugin, 'cssnano')
 })
 
