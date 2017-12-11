@@ -32,7 +32,7 @@ By default, the css standard plugin pack includes:
 
 - [sugarss](https://github.com/postcss/sugarss), whitespace-based html, similar to jade/pug
 - [postcss-import](https://github.com/postcss/postcss-import), like `require` for css
-- [rucksack](https://simplaio.github.io/rucksack/), collection of syntax sugar for css
+- [rucksack](https://github.com/seaneking/rucksack), collection of syntax sugar for css
 - [autoprefixer](https://github.com/postcss/autoprefixer), automatic vendor prefixing
 - [postcss-attribute-case-insensitive](https://github.com/Semigradsky/postcss-attribute-case-insensitive), allows [case insensitive attr selectors](https://www.w3.org/TR/selectors4/#attribute-case)
 - [postcss-calc](https://github.com/postcss/postcss-calc), reduces calc expression where possible
