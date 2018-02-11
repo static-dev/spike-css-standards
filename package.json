@@ -8,7 +8,7 @@
   },
   "bugs": "https://github.com/static-dev/spike-css-standards/issues",
   "dependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^8.0.0",
     "cssnano": "^3.7.4",
     "postcss-attribute-case-insensitive": "^2.0.0",
     "postcss-calc": "^6.0.0",
