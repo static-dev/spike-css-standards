@@ -30,7 +30,7 @@ postcss(standards.plugins)
 
 By default, the css standard plugin pack includes:
 
-- [sugarss](https://github.com/postcss/sugarss), whitespace-based html, similar to jade/pug
+- [sugarss](https://github.com/postcss/sugarss), whitespace-based css, similar to sass/stylus
 - [postcss-import](https://github.com/postcss/postcss-import), like `require` for css
 - [rucksack](https://simplaio.github.io/rucksack/), collection of syntax sugar for css
 - [autoprefixer](https://github.com/postcss/autoprefixer), automatic vendor prefixing
