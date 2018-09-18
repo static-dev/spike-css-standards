@@ -26,7 +26,7 @@
     "postcss-font-variant": "^3.0.0",
     "postcss-image-set-polyfill": "^0.4.4",
     "postcss-import": "^11.0.0",
-    "postcss-media-minmax": "^3.0.0",
+    "postcss-media-minmax": "^4.0.0",
     "postcss-nesting": "^5.0.0",
     "postcss-property-lookup": "^2.0.0",
     "postcss-pseudo-class-any-link": "^4.0.0",
