@@ -30,7 +30,7 @@
     "postcss-nesting": "^5.0.0",
     "postcss-property-lookup": "^2.0.0",
     "postcss-pseudo-class-any-link": "^4.0.0",
-    "postcss-selector-matches": "^3.0.1",
+    "postcss-selector-matches": "^4.0.0",
     "postcss-selector-not": "^3.0.1",
     "rucksack-css": "^1.0.2"
   },
