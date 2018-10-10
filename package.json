@@ -13,7 +13,7 @@
     "postcss-attribute-case-insensitive": "^2.0.0",
     "postcss-calc": "^6.0.1",
     "postcss-color-function": "^4.0.1",
-    "postcss-color-gray": "^4.1.0",
+    "postcss-color-gray": "^5.0.0",
     "postcss-color-hex-alpha": "^3.0.0",
     "postcss-color-hsl": "^2.0.0",
     "postcss-color-hwb": "^3.0.0",
