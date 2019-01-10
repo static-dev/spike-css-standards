@@ -10,7 +10,7 @@
   "dependencies": {
     "autoprefixer": "9.3.1",
     "cssnano": "4.1.7",
-    "postcss-attribute-case-insensitive": "4.0.0",
+    "postcss-attribute-case-insensitive": "4.0.1",
     "postcss-calc": "7.0.1",
     "postcss-color-function": "^4.0.1",
     "postcss-color-gray": "5.0.0",
